@@ -1,5 +1,20 @@
 * {
   font-family: monospace;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5em;
+  padding: .5em 1.2em;
 }
 
 a {
@@ -16,7 +31,7 @@ a {
 
 .game-images {
   display: grid;
-  grid-template: auto / repeat(auto-fill, minmax(480px, 1fr));
+  grid-template: auto / repeat(auto-fit, minmax(480px, 1fr));
   justify-items: center;
   width: calc(100vw - 20%);
 }
@@ -31,7 +46,9 @@ a {
   align-items: center;
   font-size: 1.2em;
   font-weight: 600;
-  transition: width 2s cubic-bezier(0.72, 0, 0, 0.89), box-shadow 2s;
+  transition: width 2s cubic-bezier(0.72, 0, 0, 0.89), box-shadow 2s
+    cubic-bezier(0.72, 0, 0, 0.89), font-size
+    2s cubic-bezier(0.72, 0, 0, 0.89);
 }
 
 .game-image > img {
@@ -39,6 +56,11 @@ a {
 }
 
 .game-image:hover {
-  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 20px 15px rgba(0, 0, 0, 0.5);
   width: 500px;
+  font-size: 1.5em;
+}
+
+.game-details {
+  padding: .2em 0;
 }

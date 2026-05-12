@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="home-page">
         <div className="game-images">
-          <Link to="/images/1">
+          <Link to="/game/1">
             <div className="game-image">
               <img src={game} alt="Game image for where's waldo thingy" />
               <div className="game-details">
