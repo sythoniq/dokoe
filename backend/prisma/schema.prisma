@@ -13,8 +13,15 @@ datasource db {
 }
 
 model Characters {
-  characterId     Int     @id @default(autoincrement())
-  characterName   String  @unique
-  characterPosX   Float
-  characterPosY   Float
+  characterId   Int    @id @default(autoincrement())
+  characterName String @unique
+  characterPosX Float
+  characterPosY Float
+}
+
+model Scores {
+  scoreId    Int      @id @default(autoincrement())
+  playerName String
+  timeMs     Int
+  createdAt  DateTime @default(now())
 }
